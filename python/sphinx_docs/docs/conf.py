@@ -40,6 +40,10 @@ if branch.startswith("release-"):
 else:
     prefix = "../../master-tmp"
 
+# The version shown in every page title, e.g. "OPM Python Documentation 2026.04 documentation".
+# Sphinx reads the module-level name `release` itself, so nothing else in this file refers to it.
+release = extract_opm_simulators_release(os.path.join(prefix, "dune.module"))
+
 # -- General configuration ---------------------------------------------------
 import sys
 
