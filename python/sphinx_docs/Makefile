@@ -1,4 +1,4 @@
-.PHONY: docs view-docs check-branch
+.PHONY: docs view-docs test coverage check-branch
 
 CURRENT_BRANCH := $(shell git rev-parse --abbrev-ref HEAD)
 GIT_ROOT := $(shell git rev-parse --show-toplevel)
