@@ -8,8 +8,9 @@ GIT_ROOT := $(shell git rev-parse --show-toplevel)
 docs:
 	sphinx-versioned -m ${CURRENT_BRANCH} -b ${CURRENT_BRANCH} --git-root ../../
 
+# opmdoc-view-doc opens the page with the platform's own opener (xdg-open, open or start)
 view-docs:
-	@xdg-open "file://$(GIT_ROOT)/python/sphinx_docs/docs/_build/$(CURRENT_BRANCH)/index.html"
+	@opmdoc-view-doc --branch=$(CURRENT_BRANCH)
 
 test:
 	pytest tests/
